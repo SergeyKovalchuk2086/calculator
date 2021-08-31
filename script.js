@@ -29,3 +29,13 @@ equal.addEventListener('click', () => {
         inputField.value = eval(exp);
     }
 }) 
+
+//вычислить выражение по нажатию клавиши Enter
+inputField.onkeypress = function(event) {
+    if(event.keyCode === 13) {
+        let exp = inputField.value;
+        if(exp) {
+            inputField.value = eval(exp);
+        }
+    }
+}
